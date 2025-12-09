@@ -1,0 +1,417 @@
+/*-----Global Desktop Styles---*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 4px;
+  padding: 2.3em 3em 3em 3em;
+  background: #f7f7f7;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin-top: 4px;
+}
+
+/*------Header Wrapper thingamajig-------*/
+.header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  z-index: 1;
+}
+
+/*----Dark overlay for Accessibility---*/
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+  z-index: 1;
+}
+
+/* Header text */
+.header-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.header-content h1 {
+  padding: 15px;
+  font-size: 2.5rem;
+  margin: 0;
+  border: 10px double slategrey;
+}
+
+/*----Navbar----*/
+.navbar {
+  background: #e5e5e5;
+  padding: 15px 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  padding: 4px;
+  border: 4px double darkslategray;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+  transform: scale(1.25);
+  color: #000;
+}
+
+/*----Global Background Styles---*/
+main {
+  background-color: antiquewhite;
+  padding-top: 30px;
+  border: 20px solid white;
+}
+
+/*-------Home-------*/
+
+/* What's New */
+.whats-new {
+  text-align: center;
+  margin: 0 auto 40px;
+  padding: 30px 20px;
+  border: 10px double black;
+  max-width: 500px;
+}
+
+/* Blog Section */
+.blog-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+
+.blog-card {
+  background: white;
+  width: 380px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.img-placeholder {
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Row  */
+.hero-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  gap: 40px;
+}
+
+.hero-row .text {
+  flex: 1;
+  max-width: 400px;
+  padding: 50px;
+}
+
+.hero-row .img-placeholder {
+  flex: 1;
+  height: 350px;
+  border: 10px double darkolivegreen;
+  overflow: hidden;
+}
+
+.hero-row .img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---All other pages--- */
+.other-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border: 10px double darkslategray;
+}
+
+.other-photo {
+  flex: 1;
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.other-photo img {
+  width: 100%;
+  height: auto;
+  border: 8px double #555;
+}
+
+.other-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.other-text h3 {
+  color: rgb(30, 132, 132);
+  font-size: large;
+}
+
+/*-----Recipe Pages------- */
+.recipe-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.recipe-photo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.recipe-photo img {
+  display:block;
+  width: 340px;
+  height: 250px;
+  border: 6px double #555;
+  object-fit: cover;
+}
+
+.recipe-info h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.recipe-info h3 {
+  margin-top: 8px;
+  color: rgb(30, 132, 132);
+}
+
+/* Recipe Intro Stuffs */
+.recipe-intro {
+  background-color: #f9f5e8;
+  padding: 15px 18px;
+  border-left: 8px solid #d1b98c;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Tools & Ingredients Stuffs */
+.tools-list {
+  padding-left: 40px;
+  margin: 10px 0;
+  list-style-type: disc;
+}
+
+.ingredients-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.ingredients-list dt {
+  position: relative;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  padding-left: 22px;
+
+}
+
+.ingredients-list dt::before { /*come back to this...*/
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+}
+
+.ingredients-list dd {
+  display: list-item;
+  list-style-type: circle;
+  margin-left: 40px;
+  margin-bottom: 6px;
+  font-size: medium;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 10px;
+  text-align: center;
+  padding: 2px;
+  background: #e5e5e5;
+}
+
+/*--------Mobile/Tablet Styles according to google inspect------- */
+@media screen and (max-width: 768px) {
+
+  /* Header */
+  .header {
+    height: 200px;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+    padding: 8px;
+    border-width: 6px;
+  }
+
+  /* Navbar */
+  .navbar ul {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    transform: none !important;
+  }
+
+  .hero-row {
+  flex-direction: column;     
+  align-items: center;
+  text-align: center;
+  gap: 20px;                  
+  margin: 20px 0;            
+}
+
+.hero-row .text {
+  padding: 15px;           
+  max-width: 90%;          
+}
+
+.hero-row .img-placeholder {
+  width: 100%;
+  height: auto;             
+  border-width: 6px;        
+}
+
+.hero-row .img-placeholder img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;      /*ehh not sure about this, come back to it*/
+}
+
+  /* About & Recipe wrapper */
+  .other-wrapper {
+    padding: 20px 15px;
+    margin: 20px 10px;
+  }
+
+  /* Recipe header */
+  .recipe-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .recipe-photo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .recipe-photo img {
+    width: 80%;              
+    max-width: 280px;        
+    height: auto;          
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .recipe-info {
+    width: 100%;
+    max-width: 280px;     
+    margin: 0 auto;   
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .recipe-info h2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .recipe-info h3 {
+    font-size: 1.rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Intro */
+  .recipe-intro {
+    padding: 15px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Lists */
+  .tools-list li,
+  .ingredients-list {
+    padding-left: 20px !important;
+    padding-left: 20px !important;    /* hmmm....come back to this */
+    margin-left: 0 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .ingredients-list dd {
+    margin-left: 20px !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
